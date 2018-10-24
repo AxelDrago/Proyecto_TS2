@@ -1,0 +1,33 @@
+body {
+    background-image:'imagen\back.jpg';
+    font-family: arial;
+    font-size: 1.2em;
+}
+h1 {
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    padding: 10px;
+}
+
+form > div {
+    margin: 20px 10px;
+}
+h2{
+    color: rgb(156, 33, 33);
+    text-shadow: 3px 3px 3px black;
+}
+td{
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+#cabecera{
+    background-color: cornsilk;
+}
+#titulo{
+    background-color: rgb(182, 151, 51);
+}
