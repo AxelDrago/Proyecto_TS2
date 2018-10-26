@@ -40,3 +40,10 @@ td{
     margin: auto;
     border:3px solid #333333;
 }
+#mostrar {
+    border-radius: 100px;
+}
+#imagen{
+    width:20px; 
+    height:20px;
+}
