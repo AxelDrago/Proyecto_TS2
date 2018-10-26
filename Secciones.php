@@ -16,10 +16,16 @@ session_start();
     </div>
     <div id="secciones" style="display:none">
         <ul>
-            <li><a href="">Portada</a></li>
-            <li><a href="">Noticias</a></li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="">Reportes</a></li>
+            <li><a href="">1.Guía de relaciones personales y de pareja</a></li>
+            <li><a href="">2.Desarrollo Personal (pasiones y ambiciones personales)</a></li>
+            <li><a href="">3.Cómo ser o tener un amigo</a></li>
+            <li><a href="">4.Tiempo libre: seguir una pasión</a></li>
+            <li><a href="">5.Nutrición saludable</a></li> 
+            <li><a href="">6.Sexualidad.</a></li> 
+            <li><a href="">7.Cómo gastar el dinero, Inversiones.</a></li> 
+            <li><a href="">8.Literatura, poesía, novelas.</a></li> 
+            <li><a href="">9.Estudios: como conseguir perseverar en los estudios</a></li> 
+            <li><a href="">10.Foro de comentarios y vivencias </a></li> 
         </ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

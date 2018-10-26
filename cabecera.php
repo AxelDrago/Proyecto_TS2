@@ -4,6 +4,7 @@
 <div id="cabecera">
     <nav>
         <a href="Menu.php">Menu de Inicio</a>
+        <a href="Secciones.php">Secciones</a>
         <a href="Registrar_usuario.php">Crear cuenta de usuario</a>
 
         <?php if (isset($_SESSION["correo"])) { ?>
