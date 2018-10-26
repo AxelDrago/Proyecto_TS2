@@ -31,3 +31,12 @@ td{
 #titulo{
     background-color: rgb(62, 59, 221);
 }
+#comando{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#secciones{
+    width: 500px;
+    margin: auto;
+    border:3px solid #333333;
+}
