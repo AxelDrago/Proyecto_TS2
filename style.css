@@ -36,7 +36,8 @@ td{
     margin-bottom: 30px;
 }
 #secciones{
-    width: 500px;
+    background-color: darkgrey;
+    width: auto;
     margin: auto;
     border:3px solid #333333;
 }
