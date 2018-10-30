@@ -1,5 +1,8 @@
 <?php
 session_start();
+$db = new PDO('mysql:host=localhost;dbname=proyecto;charset=utf8mb4', 'root', '');
+$stmt=$db ->query("SELECT * FROM noticias ORDER BY id DESC");
+$noticias =$stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,39 +53,39 @@ session_start();
     
     </div>
 
-    <table style="width:100%; border-collapse:collapse;" border="1">
+    <div id="ilustraciones">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+    </div>
+
+    <table style="width:auto; border-collapse:collapse;" border="1">
         <tr>
-            <th>Nombre completo</th>
-            <th>Correo</th>
-            <th>Password</th>
-            <th>Fecha de Nacimiento</th>
-            <th>Operaciones</th>
+            <th>Noticias</th>
+            <th>Acciones</th>
+            
         </tr>
-    <?php if(count($usuarios) == 0) { ?>
+    <?php if(count($noticias) == 0) { ?>
         <tr>
             <td colspan="5"
-            style="text-align:center;">No se encuentran usuarios registrados</td>
+            style="text-align:center;">No se encuentran noticias registrados</td>
         </tr>
     <?php } ?>
 
-    <?php foreach($usuarios as $u) { ?>
+    <?php foreach($noticias as $n) { ?>
     <tr>
-        <td><?php echo $u["nombres"] ?> <?php echo $u["apellidos"] ?></td>
-        <td><?php echo $u["correo"] ?></td>
-        <td><?php echo $u["password"] ?></td>
-        <td><?php echo $u["fecha_nacimiento"] ?></td>
+        <td><?php echo $n["titulo"] ?> : <br>
+            <?php echo $n["contenido"] ?></td>
         <td style="text-align: center;">
-            <form action="borrar_usuario.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
+            <form action="borrar_noticia.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
                 <button type="submit">Borrar</button>
             </form>
-            <form action="editar_usuario.php" method="get">
-                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
+            <form action="editar_noticia.php" method="get">
+                <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
                 <button type="submit">Editar</button>
-            </form>
-            <form action="cambiar_contraseña.php" method="get">
-                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                <button type="submit">Cambiar</button>
             </form>
 
         </td>
@@ -90,6 +93,7 @@ session_start();
 
     <?php } ?>
     </table>
+    
     <?php  ?>
 
     <?php  ?>
