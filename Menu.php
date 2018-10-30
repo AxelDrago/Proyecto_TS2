@@ -54,14 +54,15 @@ $noticias =$stmt->fetchAll();
     </div>
 
     <div id="ilustraciones">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img src="imagenes\des.jpg" alt="">
+            <img src="imagenes\por.jpg" alt="">
+            <img src="imagenes\quien.jpg" alt="">
+            <img src="imagenes\ju.jpg" alt="">
+            <img src="imagenes\ado.jpg" alt="">
     </div>
 
-    <table style="width:auto; border-collapse:collapse;" border="1">
+    <div id="tabla">
+    <table style="border-collapse:collapse;" border="1">
         <tr>
             <th>Noticias</th>
             <th>Acciones</th>
@@ -93,6 +94,7 @@ $noticias =$stmt->fetchAll();
 
     <?php } ?>
     </table>
+    </div>
     
     <?php  ?>
 
