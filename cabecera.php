@@ -8,6 +8,8 @@
 
         <?php if (isset($_SESSION["correo"])) { ?>
             <a href="logout.php">Cerrar sesión (<?php echo $_SESSION["correo"] ?>)</a>
+            <a href="lista_usuario">Lista de Usuarios</a>
+            <a href="noticia_registrar">Registrar Noticias</a>
         <?php } else { ?>
             <a href="login.php">Iniciar sesión</a>
         <?php } ?>
