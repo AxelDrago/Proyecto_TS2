@@ -1,5 +1,8 @@
 <?php
 session_start();
+$db = new PDO('mysql:host=localhost;dbname=proyecto;charset=utf8mb4', 'root', '');
+$stmt=$db ->query("SELECT * FROM guia ORDER BY id DESC");
+$guia =$stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +16,27 @@ session_start();
 <body>
     <?php include 'cabecera.php' ?>
     <h2>Guía de relaciones personales y de pareja</h2>
-    
+    <div id="tabla">
+        <table>
+            <tr>
+                <th></th>           
+            </tr>
+        <?php if(count($guia) == 0) { ?>
+            <tr>
+                <td colspan="5"
+                style="text-align:center;">No se encuentran datos registrados</td>
+            </tr>
+        <?php } ?>
+
+        <?php foreach($guia as $g) { ?>
+        <tr>
+            <td><h1><?php echo $g["titulo"] ?></h1><br>
+                <?php echo $g["contenido"] ?></td>
+            </tr>
+
+        <?php } ?>
+        </table>
+    </div>
 
 </body>
 </html>

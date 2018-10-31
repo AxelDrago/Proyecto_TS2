@@ -24,7 +24,7 @@ session_start();
             Titulo: <input type="text" name="titulo" value="<?php echo $n-> titulo?>">
         </div>
         <div>
-            Contenido: <textarea name="contenido" id="" cols="30" rows="10"></textarea>
+            Contenido: <textarea name="contenido" id="" cols="30" rows="10" value="<?php echo $n-> contenido?>"></textarea>
         </div>
         <div>
             <button type="submit">Editar noticia</button>

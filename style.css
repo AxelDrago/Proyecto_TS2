@@ -55,12 +55,15 @@ td{
  }
  table {
     width: 100%;
-    word-wrap: break-word;
+    word-wrap: inherit;
  }
  td {
     text-align: left;
     vertical-align: top;
     padding:  15px 15px 15px 15px;
+ }
+ td, h1{
+    text-align: left;
  }
 #ilustraciones{
     display: flex;

@@ -9,6 +9,7 @@
         <?php if (isset($_SESSION["correo"])) { ?>
             <a href="lista_usuario.php">Lista de Usuarios</a>
             <a href="noticia_registrar.php">Registrar Noticias</a>
+            <a href="Registrar_guia.php">Registrar_guia</a>
             <a href="logout.php">Cerrar sesión (<?php echo $_SESSION["correo"] ?>)</a>
         <?php } else { ?>
             <a href="login.php">Iniciar sesión</a>
