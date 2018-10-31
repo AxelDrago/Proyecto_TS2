@@ -65,8 +65,9 @@ $noticias =$stmt->fetchAll();
         <table style="border-collapse:collapse;" border="1">
             <tr>
                 <th>Noticias</th>
-                <th>Acciones</th>
-            
+                <?php if (isset($_SESSION["correo"])) { ?>
+                    <th>Acciones</th>
+                <?php } ?>
             </tr>
         <?php if(count($noticias) == 0) { ?>
             <tr>
@@ -79,18 +80,20 @@ $noticias =$stmt->fetchAll();
         <tr>
             <td><h1><?php echo $n["titulo"] ?></h1><br>
                 <?php echo $n["contenido"] ?></td>
-            <td style="text-align: center;">
-                <form action="borrar_noticia.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
-                    <button type="submit">Borrar</button>
-                </form>
-                <form action="editar_noticia.php" method="get">
-                    <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
-                    <button type="submit">Editar</button>
-                </form>
-
-            </td>
-            </tr>
+            <?php if (isset($_SESSION["correo"])) { ?>
+                <td style="text-align: center;">
+                    <form action="borrar_noticia.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
+                        <button type="submit">Borrar</button>
+                    </form>
+                
+                    <form action="editar_noticia.php" method="get">
+                        <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
+                        <button type="submit">Editar</button>
+                    </form>
+                </td>
+            <?php } ?>
+        </tr>
 
         <?php } ?>
         </table>
