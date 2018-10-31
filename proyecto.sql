@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2018 a las 16:33:21
+-- Tiempo de generación: 31-10-2018 a las 16:58:01
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 7.1.7
 
@@ -33,6 +33,14 @@ CREATE TABLE `guia` (
   `titulo` varchar(500) NOT NULL,
   `contenido` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `guia`
+--
+
+INSERT INTO `guia` (`id`, `titulo`, `contenido`) VALUES
+(2, 'RELACIONES Y PAREJAS SALUDABLES: Cómo disfrutar del sexo y del amor ', ''),
+(3, '1.-Las relaciones sexuales y amorosas son para disfrutar', 'Estás en la edad en la que empiezas a mantener relaciones con\r\notras personas, que van más allá de la amistad, el compañerismo\r\no el ser miembros de la misma pandilla.\r\nLas relaciones pueden ser unas de las cosas más positivas que\r\nocurran en tu vida; pueden ser románticas, excitantes, divertidas,\r\npueden provocarte sentimientos positivos muy intensos…Pero, a\r\nveces, también pueden ser algo complicado y provocar sentimientos\r\nnegativos e incluso dolor.\r\nAunque es normal que las relaciones pasen por etapas donde haya\r\ntanto aspectos positivos como negativos (al fin y al cabo somos\r\npersonas distintas, con distintos intereses, deseos y personalidades),\r\nmantener una relación solo tiene sentido cuando nos\r\naporta cosas positivas la mayor parte del tiempo.\r\n\r\nCuando en una relación ambas personas estáis a gusto, disfrutáis\r\nmutuamente de vuestra compañía, y os tratáis con respeto, tenéis\r\nuna relación sana.\r\nMantener una relación sana requiere tiempo, energía y dedicación,\r\npero vale la pena.\r\nEs bueno ser exigente respecto a las personas con las tengas una\r\nrelación.\r\nUn buen truco es pensar en las cualidades de las personas que\r\nconsideras tus amigos y amigas, en qué cosas te gustan de esas\r\npersonas, qué cosas les permites y cómo os respetáis. Esas características\r\ndeberíamos buscarlas en las personas con las que\r\nmantenemos una relación.\r\nSi aún no mantienes ninguna relación, tómate tu tiempo y trata de\r\nconocer a mucha gente. No pienses que porque no tengas una relación\r\nvas a ser diferente a los demás, ya que nadie necesita de otra\r\npersona a su lado para ser una persona completa.\r\nSi comienzas una relación y no te acaba de convencer, debes sentirte\r\nlibre para terminarla. No tiene sentido que tengas a tu lado a\r\nuna persona que te haga daño o que simplemente no te haga feliz.');
 
 -- --------------------------------------------------------
 
@@ -108,7 +116,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `guia`
 --
 ALTER TABLE `guia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `noticias`
 --
