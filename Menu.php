@@ -62,7 +62,7 @@ $noticias =$stmt->fetchAll();
     </div>
 
     <div id="tabla">
-        <table style="border-collapse:collapse;" border="1">
+        <table>
             <tr>
                 <th>Noticias</th>
                 <?php if (isset($_SESSION["correo"])) { ?>

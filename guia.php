@@ -1,7 +1,7 @@
 <?php
 session_start();
 $db = new PDO('mysql:host=localhost;dbname=proyecto;charset=utf8mb4', 'root', '');
-$stmt=$db ->query("SELECT * FROM guia ORDER BY id DESC");
+$stmt=$db ->query("SELECT * FROM guia");
 $guia =$stmt->fetchAll();
 ?>
 <!DOCTYPE html>
