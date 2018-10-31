@@ -29,11 +29,11 @@ $noticias =$stmt->fetchAll();
                 <li><a href="amigo.php">3.Cómo ser o tener un amigo</a></li>
                 <li><a href="tiempo.php">4.Tiempo libre: seguir una pasión</a></li>
                 <li><a href="nutricion.php">5.Nutrición saludable</a></li> 
-                <li><a href="">6.Sexualidad.</a></li> 
-                <li><a href="">7.Cómo gastar el dinero, Inversiones.</a></li> 
-                <li><a href="">8.Literatura, poesía, novelas.</a></li> 
-                <li><a href="">9.Estudios: como conseguir perseverar en los estudios</a></li> 
-                <li><a href="">10.Foro de comentarios y vivencias </a></li> 
+                <li><a href="Sexualidad.php">6.Sexualidad.</a></li> 
+                <li><a href="inversiones.php">7.Cómo gastar el dinero, Inversiones.</a></li> 
+                <li><a href="poesía.php">8.Literatura, poesía, novelas.</a></li> 
+                <li><a href="estudios.php">9.Estudios: como conseguir perseverar en los estudios</a></li> 
+                <li><a href="comentarios.php">10.Foro de comentarios y vivencias </a></li> 
             </ul>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -62,38 +62,38 @@ $noticias =$stmt->fetchAll();
     </div>
 
     <div id="tabla">
-    <table style="border-collapse:collapse;" border="1">
-        <tr>
-            <th>Noticias</th>
-            <th>Acciones</th>
+        <table style="border-collapse:collapse;" border="1">
+            <tr>
+                <th>Noticias</th>
+                <th>Acciones</th>
             
-        </tr>
-    <?php if(count($noticias) == 0) { ?>
+            </tr>
+        <?php if(count($noticias) == 0) { ?>
+            <tr>
+                <td colspan="5"
+                style="text-align:center;">No se encuentran noticias registrados</td>
+            </tr>
+        <?php } ?>
+
+        <?php foreach($noticias as $n) { ?>
         <tr>
-            <td colspan="5"
-            style="text-align:center;">No se encuentran noticias registrados</td>
-        </tr>
-    <?php } ?>
+            <td><h1><?php echo $n["titulo"] ?></h1><br>
+                <?php echo $n["contenido"] ?></td>
+            <td style="text-align: center;">
+                <form action="borrar_noticia.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
+                    <button type="submit">Borrar</button>
+                </form>
+                <form action="editar_noticia.php" method="get">
+                    <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
+                    <button type="submit">Editar</button>
+                </form>
 
-    <?php foreach($noticias as $n) { ?>
-    <tr>
-        <td><?php echo $n["titulo"] ?> : <br>
-            <?php echo $n["contenido"] ?></td>
-        <td style="text-align: center;">
-            <form action="borrar_noticia.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
-                <button type="submit">Borrar</button>
-            </form>
-            <form action="editar_noticia.php" method="get">
-                <input type="hidden" name="id" value="<?php echo $n["id"] ?>">
-                <button type="submit">Editar</button>
-            </form>
+            </td>
+            </tr>
 
-        </td>
-    </tr>
-
-    <?php } ?>
-    </table>
+        <?php } ?>
+        </table>
     </div>
     
     <?php  ?>
