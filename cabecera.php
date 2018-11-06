@@ -1,5 +1,6 @@
 <div id="titulo">
     <h1>Don'tGiveUp</h1>
+    
 
 <div id="cabecera">
     <nav>
@@ -12,24 +13,26 @@
 
     <div>
             
-            <div id="comandar">
+        <div id="comandar">
             <button id="mostrara">Registrar<img src="imagenes\gi.png" alt="" id="imagen"></button>
         </div>
+
         <div id="registro" style="display:none">
             <ul>
                 <li><a href="noticia_registrar.php">Registrar Noticias</a></li>
                 <li><a href="Registrar_guia.php">Registrar guia</a></li>
                 <li><a href="registrar_desarrollo.php">Registrar Desarrollo Personal</a></li>
-                <!-- <li><a href="amigo.php">3.Cómo ser o tener un amigo</a></li>
-                <li><a href="tiempo.php">4.Tiempo libre: seguir una pasión</a></li>
-                <li><a href="nutricion.php">5.Nutrición saludable</a></li> 
-                <li><a href="Sexualidad.php">6.Sexualidad.</a></li> 
-                <li><a href="inversiones.php">7.Cómo gastar el dinero, Inversiones.</a></li> 
-                <li><a href="poesía.php">8.Literatura, poesía, novelas.</a></li> 
+                <li><a href="registrar_amigo.php">Registar guia de amigo</a></li>
+                <li><a href="registrar_tiempo.php">Registrar Tiempo libre</a></li>
+                <li><a href="registrar_nutricion.php">Registar Nutrición saludable</a></li> 
+                <li><a href="registrar_Sexualidad.php">Registrar guia de Sexualidad.</a></li> 
+                <li><a href="registrar_inversiones.php">Registrar Inversiones.</a></li> 
+                <!--<li><a href="poesía.php">8.Literatura, poesía, novelas.</a></li> 
                 <li><a href="estudios.php">9.Estudios: como conseguir perseverar en los estudios</a></li> 
                 <li><a href="comentarios.php">10.Foro de comentarios y vivencias </a></li> -->
             </ul>
         </div>
+        
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script>
             $("#mostrara").click(function(){

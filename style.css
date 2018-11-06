@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(211, 184, 127);
+    background-color: rgb(125, 165, 211);
     font-family: arial;
     font-size: 1.2em;
 }
@@ -28,9 +28,14 @@ td{
 }
 #cabecera{
     background-color: cornsilk;
+    clear: both;
 }
 #titulo{
-    background-color: rgb(189, 138, 27);
+    background-color: rgb(60, 38, 122);
+}
+#titulo > h1{
+    text-align: center;
+    color: aliceblue;
 }
 #comando{
     text-align: center;
