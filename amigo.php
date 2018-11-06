@@ -1,5 +1,9 @@
 <?php
 session_start();
+include 'config.php';
+$db = new PDO("mysql:host=$direccion;dbname=$bd;charset=utf8mb4", $usuario, $pass);
+$stmt=$db ->query("SELECT * FROM amigo");
+$guia =$stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">

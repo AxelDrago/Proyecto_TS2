@@ -1,6 +1,7 @@
 <?php
 session_start();
-$db = new PDO('mysql:host=localhost;dbname=proyecto;charset=utf8mb4', 'root', '');
+include 'config.php';
+$db = new PDO("mysql:host=$direccion;dbname=$bd;charset=utf8mb4", $usuario, $pass);
 $stmt=$db ->query("SELECT * FROM guia");
 $guia =$stmt->fetchAll();
 ?>

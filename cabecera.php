@@ -18,9 +18,9 @@
         <div id="registro" style="display:none">
             <ul>
                 <li><a href="noticia_registrar.php">Registrar Noticias</a></li>
-                <li><a href="Registrar_guia.php">Registrar_guia</a></li>
-                <!-- <li><a href="desarrollo.php">2.Desarrollo Personal (pasiones y ambiciones personales)</a></li>
-                <li><a href="amigo.php">3.Cómo ser o tener un amigo</a></li>
+                <li><a href="Registrar_guia.php">Registrar guia</a></li>
+                <li><a href="registrar_desarrollo.php">Registrar Desarrollo Personal</a></li>
+                <!-- <li><a href="amigo.php">3.Cómo ser o tener un amigo</a></li>
                 <li><a href="tiempo.php">4.Tiempo libre: seguir una pasión</a></li>
                 <li><a href="nutricion.php">5.Nutrición saludable</a></li> 
                 <li><a href="Sexualidad.php">6.Sexualidad.</a></li> 

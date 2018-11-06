@@ -8,13 +8,13 @@ $contenido=$_POST["contenido"];
 #proceso
 include 'config.php';
 $db = new PDO("mysql:host=$direccion;dbname=$bd;charset=utf8mb4", $usuario, $pass);
-$stmt=$db ->query ("INSERT INTO noticias VALUES (NULL,'$titulo', SYSDATE(),'$contenido')");
+$stmt=$db ->query ("INSERT INTO desarrollo VALUES (NULL,'$titulo','$contenido')");
 
 
 
 
 #salida
-header("Location: noticia_confirmacion.php");
+header("Location: desarrollo.php");
 
 
 

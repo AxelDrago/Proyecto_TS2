@@ -11,7 +11,8 @@ $nacimiento=$_POST["nacimiento"];
 
 #proceso
 $password=sha1($password);
-$db = new PDO('mysql:host=localhost;dbname=proyecto;charset=utf8mb4', 'root', '');
+include 'config.php';
+$db = new PDO("mysql:host=$direccion;dbname=$bd;charset=utf8mb4", $usuario, $pass);
 $stmt=$db ->query ("INSERT INTO usuarios VALUES (NULL,'$correo','$password', SYSDATE(),'$nombres','$apellidos','$nacimiento')");
 
 
