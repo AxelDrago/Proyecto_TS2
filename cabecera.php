@@ -27,9 +27,9 @@
                 <li><a href="registrar_nutricion.php">Registar Nutrición saludable</a></li> 
                 <li><a href="registrar_Sexualidad.php">Registrar guia de Sexualidad.</a></li> 
                 <li><a href="registrar_inversiones.php">Registrar Inversiones.</a></li> 
-                <!--<li><a href="poesía.php">8.Literatura, poesía, novelas.</a></li> 
-                <li><a href="estudios.php">9.Estudios: como conseguir perseverar en los estudios</a></li> 
-                <li><a href="comentarios.php">10.Foro de comentarios y vivencias </a></li> -->
+                <li><a href="registrar_poesía.php">Registrar Literatura, poesía, novelas.</a></li> 
+                <li><a href="registrar_estudios.php">Registrar guia de estudios </a></li> 
+                <li><a href="registrar_comentarios.php">Registrar Comentarios </a></li>
             </ul>
         </div>
         

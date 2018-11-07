@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2018 a las 16:53:28
--- Versión del servidor: 10.1.25-MariaDB
--- Versión de PHP: 7.1.7
+-- Tiempo de generación: 07-11-2018 a las 04:20:07
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -47,6 +47,18 @@ INSERT INTO `amigo` (`id`, `titulo`, `contenido`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(500) NOT NULL,
+  `contenido` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `desarrollo`
 --
 
@@ -63,6 +75,18 @@ CREATE TABLE `desarrollo` (
 INSERT INTO `desarrollo` (`id`, `titulo`, `contenido`) VALUES
 (1, 'Guía de Desarrollo y Superación Personal en 5 Pasos', ''),
 (2, 'Paso 1: Autoconocimiento', 'Este es quizá el paso más importante.\r\n\r\nDebes conocer como eres, que es lo que quieres, y a donde quieres llegar.\r\n\r\nLas personas son todas diferentes. Cada una tiene una personalidad diferente, distintas formas de divertirse, y diferentes conceptos de lo que es tener éxito, ser feliz o sentirse realizado.\r\n\r\nPor eso no puedes copiar los objetivos de otras personas de éxito. Aunque quizá lo que si puedes hacer es copiar los hábitos de personas exitosas, y eso es algo en lo que me estoy tratando de enfocar recientemente. Un libro muy bueno al respecto es el “Los Hábitos de la gente altamente Efectiva” de Stephen Covey.\r\n\r\nY para mí una reflexión importante es que no siempre es bueno tratar de idealizar a una persona exitosa, porque muchas veces estas personas tienen éxito en algún aspecto de su vida que a ti te interesa mejorar, pero quizá son un “desastre” en otros aspectos de su vida.\r\n\r\nTe pongo un ejemplo, el de Steve Jobs. Una persona sumamente exitosa y revolucionaria en cuanto a emprendimiento. A pesar de ser adoptado y no graduarse en la universidad, contra viento y marea hizo lo que le gustaba y tuvo éxito. Pero a mi juicio hizo cosas muy reprochables en su vida personal como por ejemplo negar su paternidad.\r\n\r\nComo te decía antes, cada uno tiene sus propios valores. Y desde mi punto de vista, las relaciones personales, sobre todo con tu familia, son lo más importante que tienes.\r\n\r\nEn una mega encuesta hace muchos años, se les preguntó a un grupo de personas que tenían una enfermedad terminal o sabían que pronto iban a morir qué es lo que lamentaban más no haber hecho en su vida. Y la gran mayoría referían el hecho de no haberles dicho a sus seres más queridos lo que les querían o sentían por ellas.\r\n\r\nEn una de las 25 charlas TED más famosas de todos los tiempos, vista más de 11 millones de veces, decían que según un estudio tenían mucho mayor esperanza de vida las personas que tenían mejores relaciones personales.\r\n\r\nY si te pones a analizar con la cabeza fría, incluso muchas veces la motivación para tener un mejor trabajo, ganar más dinero y tener éxito, tiene detrás el objetivo de mejorar nuestras relaciones interpersonales.\r\n\r\n¿Para que quieres tener más dinero o éxito?\r\n\r\n¿Para irte de vacaciones? ¿Sólo o con tu familia o pareja? Relaciones personales\r\n\r\n¿Para comprarte un coche o una mejor casa? ¿Y para qué? ¿Para lucirlas y quizá tener reconocimiento de otras personas, o invitar a tus amistades a disfrutar de ellos contigo? Relaciones personales\r\n\r\n¿Para trabajar menos horas? ¿Y para qué? ¿Para estar más tiempo con tu familia y/o amistades? Relaciones personales\r\n\r\n¿Para que quieres ser una persona exitosa? ¿Para alimentar tu ego o que la gente te reconozca por la calle y/o tener mejores contactos? Relaciones personales.\r\n\r\nA estas alturas ya te habrás dado cuenta que creo que el desarrollo personal en el área de tus relaciones con otras personas es una de las más importantes, y probablemente la que más satisfacciones te dará en el día a día.\r\n\r\nPero sigamos adelante y veamos en que otras áreas de tu vida puedes enfocar tu crecimiento personal.');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estudios`
+--
+
+CREATE TABLE `estudios` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(500) NOT NULL,
+  `contenido` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -155,6 +179,18 @@ INSERT INTO `nutricion` (`id`, `titulo`, `contenido`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `poesia`
+--
+
+CREATE TABLE `poesia` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(500) NOT NULL,
+  `contenido` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `sexualidad`
 --
 
@@ -229,9 +265,21 @@ ALTER TABLE `amigo`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `desarrollo`
 --
 ALTER TABLE `desarrollo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `estudios`
+--
+ALTER TABLE `estudios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -256,6 +304,12 @@ ALTER TABLE `noticias`
 -- Indices de la tabla `nutricion`
 --
 ALTER TABLE `nutricion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `poesia`
+--
+ALTER TABLE `poesia`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -285,46 +339,73 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `amigo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `desarrollo`
 --
 ALTER TABLE `desarrollo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `estudios`
+--
+ALTER TABLE `estudios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `guia`
 --
 ALTER TABLE `guia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT de la tabla `inversiones`
 --
 ALTER TABLE `inversiones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT de la tabla `nutricion`
 --
 ALTER TABLE `nutricion`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de la tabla `poesia`
+--
+ALTER TABLE `poesia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `sexualidad`
 --
 ALTER TABLE `sexualidad`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT de la tabla `tiempo`
 --
 ALTER TABLE `tiempo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
