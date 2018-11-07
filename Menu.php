@@ -32,7 +32,7 @@ $noticias =$stmt->fetchAll();
                 <li><a href="nutricion.php">5.Nutrición saludable</a></li> 
                 <li><a href="Sexualidad.php">6.Sexualidad.</a></li> 
                 <li><a href="inversiones.php">7.Cómo gastar el dinero, Inversiones.</a></li> 
-                <li><a href="poesía.php">8.Literatura, poesía, novelas.</a></li> 
+                <li><a href="poesia.php">8.Literatura, poesía, novelas.</a></li> 
                 <li><a href="estudios.php">9.Estudios: como conseguir perseverar en los estudios</a></li> 
                 <li><a href="comentarios.php">10.Foro de comentarios y vivencias </a></li> 
             </ul>
@@ -54,13 +54,7 @@ $noticias =$stmt->fetchAll();
     
     </div>
 
-    <div id="ilustraciones">
-            <img src="imagenes\des.jpg" alt="">
-            <img src="imagenes\por.jpg" alt="">
-            <img src="imagenes\quien.jpg" alt="">
-            <img src="imagenes\ju.jpg" alt="">
-            <img src="imagenes\ado.jpg" alt="">
-    </div>
+    <?php include 'ilustraciones.php' ?>
 
     <div id="tabla">
         <table>
@@ -80,7 +74,7 @@ $noticias =$stmt->fetchAll();
         <?php foreach($noticias as $n) { ?>
         <tr>
             <td><h1><?php echo $n["titulo"] ?></h1><br>
-                <?php echo $n["contenido"] ?></td>
+            <?php echo nl2br($n['contenido']) ?></td>
             <?php if (isset($_SESSION["correo"])) { ?>
                 <td style="text-align: center;">
                     <form action="borrar_noticia.php" method="post">

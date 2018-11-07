@@ -17,6 +17,7 @@ $guia =$stmt->fetchAll();
 <body>
     <?php include 'cabecera.php' ?>
     <h2>Cómo ser o tener un amigo</h2>
+    <?php include 'ilustraciones.php' ?>
     <div id="tabla">
         <table>
             <tr>
@@ -32,7 +33,7 @@ $guia =$stmt->fetchAll();
         <?php foreach($guia as $g) { ?>
         <tr>
             <td><h1><?php echo $g["titulo"] ?></h1><br>
-                <?php echo $g["contenido"] ?></td>
+            <?php echo nl2br($g['contenido']) ?></td>
             </tr>
 
         <?php } ?>

@@ -19,12 +19,11 @@ form > div {
 }
 
 h2{
-    color: rgb(165, 36, 36);
-    text-shadow: 3px 3px 3px rgb(68, 61, 61);
+    color: rgb(60, 36, 165);
     text-align: center;
 }
 td{
-    color: rgb(243, 243, 243);
+    color: rgb(226, 220, 220);
 }
 #cabecera{
     background-color: cornsilk;

@@ -13,11 +13,11 @@ session_start();
 <body>
     <?php include 'cabecera.php' ?>
 
-    <h2>Formulario de registro de guia</h2>
+    <h2>Formulario de registro de comentario</h2>
 
     <form action="comentarios_procesar.php" method="post">
         <div>
-            Titulo: <input type="text" name="titulo">
+            Nombre: <input type="text" name="titulo">
         </div>
         <div>
             Contenido: <textarea name="contenido" id="" cols="30" rows="10"></textarea>

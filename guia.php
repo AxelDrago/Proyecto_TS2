@@ -17,6 +17,7 @@ $guia =$stmt->fetchAll();
 <body>
     <?php include 'cabecera.php' ?>
     <h2>Guía de relaciones personales y de pareja</h2>
+    <?php include 'ilustraciones.php' ?>
     <div id="tabla">
         <table>
             <tr>

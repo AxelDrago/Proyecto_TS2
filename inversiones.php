@@ -17,6 +17,7 @@ $guia =$stmt->fetchAll();
 <body>
     <?php include 'cabecera.php' ?>
     <h2>Cómo gastar el dinero, Inversiones</h2>
+    <?php include 'ilustraciones.php' ?>
     <div id="tabla">
         <table>
             <tr>

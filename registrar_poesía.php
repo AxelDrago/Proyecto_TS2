@@ -13,7 +13,7 @@ session_start();
 <body>
     <?php include 'cabecera.php' ?>
 
-    <h2>Formulario de registro de guia</h2>
+    <h2>Formulario de registro de guia poesia</h2>
 
     <form action="poesia_procesar.php" method="post">
         <div>
