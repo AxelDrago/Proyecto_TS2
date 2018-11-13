@@ -3,7 +3,7 @@
 $id=$_POST["id"];
 $nombres=$_POST["nombre"];
 $correo=$_POST["email"];
-$pass=$_POST["password"];
+$password=$_POST["password"];
 
 
 
@@ -12,7 +12,7 @@ $pass=$_POST["password"];
 #proceso
 include 'config.php';
 $db = new PDO("mysql:host=$direccion;dbname=$bd;charset=utf8mb4", $usuario, $pass);
-$stmt=$db ->query ("UPDATE usuarios SET nombres='$nombres', correo='$correo', password='$pass' WHERE id='$id'");
+$stmt=$db ->query ("UPDATE usuarios SET nombres='$nombres', correo='$correo', password='$password' WHERE id='$id'");
 
 
 
