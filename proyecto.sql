@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2018 a las 04:20:07
+-- Tiempo de generación: 13-11-2018 a las 05:12:06
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.10
 
@@ -56,6 +56,15 @@ CREATE TABLE `comentarios` (
   `contenido` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`id`, `titulo`, `contenido`) VALUES
+(1, 'Carl', 'Es interesante pensar en una pagina que ayude a otros. Espero saber como podría empezar mi propio negocio o en que rubro?'),
+(2, 'María', 'Me gusta la parte de los poemas, me gustaría seguir viendo mas de esos.'),
+(3, 'Sara', 'Bueno, estoy estudiando psicología, por lo que eh aprendido las personas necesitan un apoyo mas de lo que se podría pensar');
+
 -- --------------------------------------------------------
 
 --
@@ -87,6 +96,13 @@ CREATE TABLE `estudios` (
   `titulo` varchar(500) NOT NULL,
   `contenido` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `estudios`
+--
+
+INSERT INTO `estudios` (`id`, `titulo`, `contenido`) VALUES
+(1, 'Perseverancia en el estudio.', 'Existe una frase muy famosa que dice:  \"perseveras y triunfaras\" , en tal sentido podemos decir que la acción de perseverar es una virtud que puede llevar al estudiante perseverante hacia el éxito en el aprendizaje donde se ha propuesto un objetivo especifico y determinado, pero hay que cultivar esa virtud, las personas perseverantes son las que a pesar  de los errores y de obstáculos en el camino continúan  trabajando o realizando acciones para lograr la meta académica deseada,  auto-superarse y continuar en la búsqueda de sus objetivos.\r\n\r\nAhora bien,  la perseverancia en el aprendizaje es uno de los mejores métodos que una persona puede tener en su carrera académica, por ejemplo, nosotros  vamos al gimnasio y ejercitamos un músculo, pues el cerebro también es un músculo que debemos ejercitar regularmente para que desarrolle una claridad cognoscitiva que nos lleve al éxito académico.\r\n\r\nPara perseverar en el estudio la formación de hábitos es importante, , estudia las mismas horas y lugar fijo, asígnate horarios cortos,  y a medida que vas internalizando la enseñanza aumenta los periodos de tiempo,  así como un atleta se va haciendo cada vez mas fuerte,  se constante y disciplinado en las actividades.\r\n.Comienza de inmediato en el mismo lugar espacio y tiempo.');
 
 -- --------------------------------------------------------
 
@@ -126,7 +142,18 @@ CREATE TABLE `inversiones` (
 
 INSERT INTO `inversiones` (`id`, `titulo`, `contenido`) VALUES
 (2, 'Top 12 de los negocios más rentables en Lima-Perú', ''),
-(3, '1. Reparación de computadoras: ', 'es difícil imaginarnos el día a día sin computador, porque con él solucionamos desde lo básico hasta lo más complejo. Cuando se nos daña, nos pone en aprietos.Una buena opción para ganar dinero es ofrecer un servicio de reparación y mantenimiento confiable, seguro y garantizado.');
+(3, '1. Reparación de computadoras: ', 'es difícil imaginarnos el día a día sin computador, porque con él solucionamos desde lo básico hasta lo más complejo. Cuando se nos daña, nos pone en aprietos.Una buena opción para ganar dinero es ofrecer un servicio de reparación y mantenimiento confiable, seguro y garantizado.'),
+(4, '2. Venta de comida: ', 'Si amas la gastronomía, este negocio es ideal para ti. Y déjame decirte que es muy rentable en esta cotidianidad que corre tan acelerada, pues cada vez tenemos menos tiempo para cocinar. Esto es ya una invitación a montar un modesto restaurante. Si además del espacio físico,ofreces despacho a domicilio tienes todas las de ganar.'),
+(5, '3. Cafeterías:', '¿sabes poco de comida extranjera y no tienes un cocinero especializado como para abrir un restaurante?Ese no es problema. Las cafeterías son una gran alternativa en Lima-Perú, sobre todo para los extranjeros que visitan la ciudad. Son un negocio relativamente fácil de abrir y no requiere mucha inversión.'),
+(6, '4. Tareas dirigidas para escolares:', 'siempre habrá estudiantes que necesitan apoyo extracurricular en asignaturas como matemáticas, física, química, idiomas… Si sabes de estas áreas, ¿qué pierdes con probar y comenzar a emprender por este lado?Una buena alternativa es ofrecer clases a domicilio.'),
+(7, '5. Asesor académico: ', 'si eres especialista en un área, tienes un certificado que lo avale y te la llevas bien con la docencia, puedes convertirte en un guía de estudiantes universitarios. Nunca faltarán alumnos que requieran asesoría para llevar a cabo sus trabajos académicos y estén dispuestos a pagar por ese servicio.'),
+(8, '6. Salón de belleza: ', ' las mujeres son un gran mercado ávido de todo lo que les permita mejorar su apariencia, por eso las peluquerías tienen un lugar privilegiado entre los negocios rentables de Lima-Perú.'),
+(9, '7. Centros de estética:', 'en Lima-Perú gozan de gran rentabilidad los espacios de belleza integral que ofrecen manicure, pedicure, maquillaje, depilación, masajes y distintos tratamientos de cosmética. Si comienzas con una peluquería y le sumas como valor agregado servicios de estética, tienes el triunfo asegurado.'),
+(10, '8. Sitios web:', 'todo emprendimiento apoyado en Internet es desde el inicio muy rentable, porque en esta plataforma encontramos todo lo necesario para facilitarnos la vida: servicios, ventas,información, contenidos y más. Crear un portal web no te tomará mucho tiempo y no tienes que ser un experto en diseño y html.'),
+(11, '9. Servicios de limpieza de casas: ', 'este tipo de negocios está destinado a satisfacer las necesidades de quienes pasan todo el día en sus trabajos y no tienen tiempo de dedicarse a las labores domésticas. Montar una compañía para asistencia en el hogar no requiere mucha inversión. Eso sí: hay que cuidar que el personal que contratemos sea confiable y responsable.'),
+(12, '10. Empresas de software: ', 'pareciera que cada día las aplicaciones para celulares y tablets tienen más impacto sobre nosotros. Los peruanos siguen muy de cerca la tecnología y se dejan seducir por sus bondades. Para conquistar el mercado del software no necesitas mucho dinero. Esta es una opción bastante rentable.'),
+(13, '11. Producción y edición de videos: ', 'el video marketing, los tutoriales y videos corporativos se han convertido en una moda y han hecho que cada día más empresas busquen personas que sepan producir y editar videos. Incursionar en este sector de la tecnología te puede resultar muy beneficioso.'),
+(14, '12. Entrenador personal:', 'cada día son más los que se preocupan por cuidar su figura. Sácale provecho a esta tendencia. Para iniciarte en el negocio del bienestar físico, toma un curso, prepárate muy bien y comienza a ofrecer tus servicios a través de sitios web y bolsas de trabajo. ¡Más adelante puedes montar tu propio gimnasio!');
 
 -- --------------------------------------------------------
 
@@ -187,6 +214,18 @@ CREATE TABLE `poesia` (
   `titulo` varchar(500) NOT NULL,
   `contenido` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `poesia`
+--
+
+INSERT INTO `poesia` (`id`, `titulo`, `contenido`) VALUES
+(1, 'Los 5 mejores poemas cortos', 'Son innumerables los poetas y las poetisas que nos han regalado parte de su sensibilidad artística a través de maravillosos textos. En este artículo encontrarás poemas cortos de famosos autores latinoamericanos y españoles, así como de algunos poetas anónimos.'),
+(2, '1. Aquí (Octavio Paz)', 'Mis pasos en esta calle Resuenan En otra calle Donde Oigo mis pasos Pasar en esta calle Donde Sólo es real la niebla.'),
+(3, '2. A un general (Julio Cortázar)', 'Región de manos sucias de pinceles sin pelo de niños boca abajo de cepillos de dientes\r\n\r\nZona donde la rata se ennoblece y hay banderas innúmeras y cantan himnos y alguien te prende, hijo de puta, una medalla sobre el pecho\r\n\r\nY te pudres lo mismo.'),
+(4, '3. Cada vez que pienso en ti (Anónimo)', 'Cada vez que pienso en ti, mis ojos rompen en llanto; y muy triste me pregunto, ¿por qué te quiero tanto?'),
+(5, '4. Síndrome (Mario Benedetti)', 'Todavía tengo casi todos mis dientes casi todos mis cabellos y poquísimas canas puedo hacer y deshacer el amor trepar una escalera de dos en dos y correr cuarenta metros detrás del ómnibus o sea que no debería sentirme viejo pero el grave problema es que antes no me fijaba en estos detalles.'),
+(6, '5. En las noches claras (Gloria Fuentes)', 'En las noches claras, resuelvo el problema de la soledad del ser. Invito a la luna y con mi sombra somos tres.');
 
 -- --------------------------------------------------------
 
@@ -344,7 +383,7 @@ ALTER TABLE `amigo`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `desarrollo`
@@ -356,7 +395,7 @@ ALTER TABLE `desarrollo`
 -- AUTO_INCREMENT de la tabla `estudios`
 --
 ALTER TABLE `estudios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `guia`
@@ -368,7 +407,7 @@ ALTER TABLE `guia`
 -- AUTO_INCREMENT de la tabla `inversiones`
 --
 ALTER TABLE `inversiones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `noticias`
@@ -386,7 +425,7 @@ ALTER TABLE `nutricion`
 -- AUTO_INCREMENT de la tabla `poesia`
 --
 ALTER TABLE `poesia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `sexualidad`
