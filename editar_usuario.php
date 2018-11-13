@@ -4,7 +4,6 @@ include 'config.php';
 $db = new PDO("mysql:host=$direccion;dbname=$bd;charset=utf8mb4", $usuario, $pass);
 $stmt = $db->query("SELECT * FROM usuarios WHERE id='$id'");
 $n = $stmt->fetchObject();
-print_r($n);
 session_start();
 ?>
 <!DOCTYPE html>
@@ -25,7 +24,7 @@ session_start();
             Nombre: <input type="text" name="nombre" value="<?php echo $n-> nombres?>">
         </div>
         <div>
-            Correo: <input type="email" name="email" id="" value="<?php echo $n-> contenido?>">
+            Correo: <input type="email" name="email" id="" value="<?php echo $n-> correo?>">
         </div>
         <div>
             Contraseña: <input type="password" name="password" id="">
