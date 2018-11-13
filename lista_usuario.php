@@ -49,10 +49,6 @@ $usuarios =$stmt->fetchAll();
                 <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
                 <button type="submit">Editar</button>
             </form>
-            <form action="cambiar_contraseña.php" method="get">
-                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                <button type="submit">Cambiar</button>
-            </form>
 
         </td>
     </tr>
